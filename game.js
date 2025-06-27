@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
             clearInterval(loadingInterval);
             setTimeout(() => {
                 loadingScreen.style.display = "none";
-                gameContainer.classList.add("loaded");
+                gameContainer.style.display = "block";
             }, 500);
         }
     }, 30);
