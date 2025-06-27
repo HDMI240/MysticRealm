@@ -1,4 +1,3 @@
-
 // game.js
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -28,20 +27,20 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     document.addEventListener("keydown", (e) => {
-        switch (e.key) {
-            case "ArrowUp":
+        switch (e.key.toLowerCase()) {
+            case "arrowup":
             case "w":
                 position.top = Math.max(0, position.top - 1);
                 break;
-            case "ArrowDown":
+            case "arrowdown":
             case "s":
                 position.top = Math.min(100, position.top + 1);
                 break;
-            case "ArrowLeft":
+            case "arrowleft":
             case "a":
                 position.left = Math.max(0, position.left - 1);
                 break;
-            case "ArrowRight":
+            case "arrowright":
             case "d":
                 position.left = Math.min(100, position.left + 1);
                 break;
@@ -59,7 +58,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".resource-node").forEach(node => {
         node.addEventListener("click", () => {
             const type = node.dataset.type;
-            alert(`Gathered from ${type}`);
+            alert(`You gathered from a ${type}`);
         });
     });
 });
